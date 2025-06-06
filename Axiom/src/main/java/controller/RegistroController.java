@@ -32,13 +32,13 @@ public class RegistroController {
     private UsuarioDAO usuarioDAO = new UsuarioDAO();
     private TrabajoDAO trabajoDAO = new TrabajoDAO();
 
-    @FXML
+    /*@FXML
     public void initialize() {
         // Cargar trabajos disponibles en el ComboBox
         List<Trabajo> trabajos = trabajoDAO.findAll();
         ObservableList<Trabajo> opciones = FXCollections.observableArrayList(trabajos);
         trabajoComboBox.setItems(opciones);
-    }
+    }*/
 
     @FXML
     private void handleRegistro(ActionEvent event) {

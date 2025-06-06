@@ -1,4 +1,9 @@
 import dao.UsuarioDAO;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import model.Nave;
 import model.Rol;
 import model.Trabajo;
@@ -7,11 +12,27 @@ import util.DatosIniciales;
 import util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import util.SceneManager;
 
-public class MainApp {
+import java.util.Objects;
+
+public class MainApp extends Application {
+
+    @Override
+    public void start(Stage stage) {
+        SceneManager.setStage(stage);
+        SceneManager.cambiarEscena("/view/inicio.fxml");
+        stage.setTitle("Menú Principal");
+        stage.setResizable(false);
+        stage.show();
+    }
+
+
+
     public static void main(String[] args) {
 
         DatosIniciales.cargar();
+        launch();
 
         /*//Abrir sesion para insertar a base de datos
 

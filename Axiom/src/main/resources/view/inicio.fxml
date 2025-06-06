@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.InicioController">
+    <padding>
+        <Insets top="40" bottom="40" left="60" right="60"/>
+    </padding>
+
+    <Text text="Bienvenido a la Axiom" style="-fx-font-size: 20px;"/>
+    <Button text="Iniciar sesión" onAction="#irALogin"/>
+    <Button text="Registrarse" onAction="#irARegistro"/>
+</VBox>
