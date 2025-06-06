@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="12" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.RegistroController">
+    <padding>
+        <Insets top="30" right="50" bottom="30" left="50"/>
+    </padding>
+
+    <Text text="Registro de Usuario" style="-fx-font-size: 20px;"/>
+
+    <Label text="Nombre"/>
+    <TextField fx:id="nombreField" promptText="Nombre"/>
+
+    <Label text="Apellido"/>
+    <TextField fx:id="apellidoField" promptText="Apellido"/>
+
+    <Label text="Edad"/>
+    <TextField fx:id="edadField" promptText="Edad"/>
+
+    <Label text="Nombre de usuario"/>
+    <TextField fx:id="usuarioField" promptText="Nombre de usuario"/>
+
+    <Label text="Contraseña"/>
+    <PasswordField fx:id="contraseñaField" promptText="Contraseña"/>
+
+    <Label text="Trabajo (opcional)"/>
+    <ComboBox fx:id="trabajoComboBox" promptText="Selecciona trabajo"/>
+
+    <Button text="Registrarse" onAction="#handleRegistro"/>
+    <Button text="Volver al login" onAction="#irALogin"/>
+
+    <Label fx:id="mensajeLabel" textFill="red" wrapText="true"/>
+</VBox>
+

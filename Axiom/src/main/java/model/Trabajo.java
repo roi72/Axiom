@@ -11,7 +11,7 @@ public class Trabajo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_trabajo;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 191)
     private String nombre;
 
     @Column
@@ -20,6 +20,13 @@ public class Trabajo {
     @OneToMany(mappedBy = "trabajo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Usuario> usuarios;
 
+    public Trabajo(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
+    public Trabajo() {
+    }
 
     public int getId_trabajo() {
         return id_trabajo;

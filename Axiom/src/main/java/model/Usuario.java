@@ -20,7 +20,7 @@ public class Usuario {
     @Column(nullable = false)
     private int edad;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 191)
     private String nombre_usuario;
 
     @Column(nullable = false)

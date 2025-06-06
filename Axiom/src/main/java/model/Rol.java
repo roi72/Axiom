@@ -12,7 +12,7 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_rol;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 191)
     private String nombre;
 
     @Column(nullable = false)
@@ -21,6 +21,14 @@ public class Rol {
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Usuario> usuarios;
 
+    public Rol(String nombre, boolean privilegiado) {
+        this.nombre = nombre;
+        this.privilegiado = privilegiado;
+    }
+
+    public Rol() {
+
+    }
 
     public int getId_rol() {
         return id_rol;

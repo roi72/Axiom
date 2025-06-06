@@ -3,6 +3,7 @@ import model.Nave;
 import model.Rol;
 import model.Trabajo;
 import model.Usuario;
+import util.DatosIniciales;
 import util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,7 +11,10 @@ import org.hibernate.Transaction;
 public class MainApp {
     public static void main(String[] args) {
 
-        //Abrir sesion para insertar a base de datos
+        DatosIniciales.cargar();
+
+        /*//Abrir sesion para insertar a base de datos
+
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
 
@@ -60,8 +64,10 @@ public class MainApp {
         // -------------------------------------------
 
         // Probar consulta con UsuarioDAO
+
         try {
             // Llamar al metodo de UsuarioDAO encargado de buscar usuario por nombre
+
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             Usuario usuario = usuarioDAO.findByNombreUsuario("admin");
 
@@ -80,6 +86,6 @@ public class MainApp {
             e.printStackTrace();
         } finally {
             HibernateUtil.shutdown();
-        }
+        }*/
     }
 }
